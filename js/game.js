@@ -1,18 +1,20 @@
 const grid =document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player')
 const timer = document.querySelector('.timer');
+const startButton = document.querySelector('#start-button');
+
 
 const characters =[
-    'alienx',
-    'besta',
-    'chama',
-    'diamante',
-    'ecoeco',
-    'fantasmatico',
-    'feedback',
-    'friagem',
-    'gigante',
-    'xlr8',
+    'Adriel',
+    'Alana',
+    'artur',
+    'biel',
+    'Camyla',
+    'danilo',
+    'julia',
+    'queiroz',
+    'bryan',
+    'theodoro',
     
 ];
 
@@ -122,11 +124,12 @@ const startTimer = ()=>{
         timer.innerHTML = currentTime + 1;
     }, 1000);
 
+    startButton.disabled = true;
+    startButton.textContent = 'Jogo em andamento...';
+
 }
 
-window.onload = ()=>{
-    spanPlayer.innerHTML = localStorage.getItem('player');
+startButton.addEventListener('click', () => {
     startTimer();
-    loadGame();
-}
-
+    loadGame(); 
+});
