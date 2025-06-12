@@ -2,6 +2,8 @@ const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 const startButton = document.querySelector('#start-button');
+const resetButton = document.querySelector('#reset-button');
+
 let tentativas = 0;
 
 const characters = [
@@ -138,6 +140,28 @@ startButton.addEventListener('click', () => {
         
     }
 });
+
+const resetGame = () => {
+
+    grid.innerHTML = '';
+
+    tentativas = 0;
+    firstCard = '';
+    secondCard = '';
+    gameStarted = false;
+    timer.innerHTML = '0';
+    document.querySelector('.tentativas').textContent = '00';
+    
+    startButton.disabled = false;
+    startButton.textContent = 'Iniciar';
+    
+    const estatisticasDiv = document.querySelector('.estatisticas');
+    if (estatisticasDiv) estatisticasDiv.innerHTML = '<h2>Estatísticas</h2>';
+    
+    if (this.loop) clearInterval(this.loop);
+};
+
+resetButton.addEventListener('click', resetGame);
 
 window.onload = () => {
     const playerName = localStorage.getItem('player') || 'Jogador';
