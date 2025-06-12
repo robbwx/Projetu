@@ -3,7 +3,7 @@ main{
     flex-direction: column;
     width: 100%;
     background-image: url(../images/metades-de-close-up-de-flores-gerbera-com-espaco-de-copia_23-2148268279.avif);
-    background-size: cover;
+    background-size: 100%;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
@@ -45,7 +45,7 @@ header{
 }
 
 .card{
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/4;
     width: 100%;
 
     border-radius: 5px;
@@ -55,19 +55,7 @@ header{
     background-color: #ccc;
 }
 
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 98vw;
-        gap: 4px;
-    }
-    .card {
-        font-size: 0.8em;
-    }
-    header, .estatisticas {
-        padding: 4px;
-    }
-}
+
 
 .face{
     width: 100%;
