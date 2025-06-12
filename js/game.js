@@ -2,6 +2,7 @@ const grid = document.querySelector('.grid');
 const spanPlayer = document.querySelector('.player');
 const timer = document.querySelector('.timer');
 const startButton = document.querySelector('#start-button');
+let tentativas = 0;
 
 const characters = [
     'Adriel',
@@ -31,13 +32,29 @@ const checkEndGame = () => {
 
     if (disabledCards.length === 20) {
         clearInterval(this.loop);
-        alert(`Parabéns, ${spanPlayer.innerHTML}! Seu tempo foi: ${timer.innerHTML}`);
+        
+        const estatisticasDiv = document.querySelector('.estatisticas');
+        const tempoFinal = timer.innerHTML;
+        estatisticasDiv.innerHTML = `
+            <h2>Fim de Jogo!</h2>
+            <p>Tempo: ${tempoFinal} segundos</p>
+            <p>Tentativas: ${tentativas}</p>
+        `;
+
     }
+};
+
+const updateTentativas = () => {
+    tentativas++;
+    document.querySelector('.tentativas').textContent = tentativas.toString().padStart(2, '0');
 };
 
 const checkCards = () => {
     const firstCharacter = firstCard.getAttribute('data-character');
     const secondCharacter = secondCard.getAttribute('data-character');
+
+    
+    updateTentativas();
 
     if (firstCharacter === secondCharacter) {
         firstCard.firstChild.classList.add('disabled-card');
@@ -118,6 +135,7 @@ startButton.addEventListener('click', () => {
         startButton.textContent = 'Jogo em andamento...';
         startTimer();
         loadGame();
+        
     }
 });
 
@@ -125,3 +143,4 @@ window.onload = () => {
     const playerName = localStorage.getItem('player') || 'Jogador';
     spanPlayer.innerHTML = playerName;
 };
+

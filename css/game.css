@@ -2,12 +2,18 @@ main{
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../images/31cc94f3-6ebd-11ef-bb0b-0afff21f57b1.avif);
+    background-image: url(../images/metades-de-close-up-de-flores-gerbera-com-espaco-de-copia_23-2148268279.avif);
     background-size: cover;
     min-height: 100vh;
     align-items: center;
     justify-content: center;
-    padding: 20px 20px 50px;
+    padding: 10px 10px 25px;
+}
+
+.estatisticas{
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    max-width: 800px;
 }
 
 header{
@@ -33,7 +39,7 @@ header{
 }
 
 .card{
-    aspect-ratio: 3/4;
+    aspect-ratio: 4/4;
     width: 100%;
 
     border-radius: 5px;
@@ -61,7 +67,7 @@ header{
 }
 
 .back{
-    background-image: url('../images/ben-10.jpg');
+    background-image: url(../images/1692972930_98469412.jpg);
     backface-visibility: hidden;
 }
 
