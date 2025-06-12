@@ -14,7 +14,7 @@ main{
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
     max-width: 800px;
-    padding: 30px;
+    padding: 4px;
     margin: 0 0 30px;
     border-radius: 5px;
     margin-bottom: 8px;
@@ -29,7 +29,7 @@ header{
     font-size:1.2em;
     width: 100%;
     max-width: 800px;
-    padding: 30px;
+    padding: 8px;
     margin: 0 0 30px;
     border-radius: 5px;
 }
@@ -37,15 +37,15 @@ header{
 .grid{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    gap: 15px;
+    gap: 8px;
     width: 100%;
-    max-width: 800px;
-    margin: 100px auto;
+    max-width: 500px;
+    margin: 0 auto;
     margin-top: 0;
 }
 
 .card{
-    aspect-ratio: 4/4;
+    aspect-ratio: 1/1;
     width: 100%;
 
     border-radius: 5px;
