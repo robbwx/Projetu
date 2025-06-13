@@ -14,7 +14,7 @@ main{
     background-color: rgba(255, 255, 255, 0.8);
     width: 100%;
     max-width: 800px;
-    padding: 8px;
+    padding: 30px;
     margin: 0 0 30px;
     border-radius: 5px;
     margin-bottom: 8px;
@@ -37,15 +37,15 @@ header{
 .grid{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    gap: 8px;
+    gap: 30px;
     width: 100%;
-    max-width: 500px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .card{
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 4/4;
     border-radius: 5px;
     position: relative;
     transition: all 400ms ease;
@@ -59,7 +59,7 @@ header{
     position: absolute;
     background-size: cover;
     background-position: center;
-    border: 2px solid #39813a;
+    border: 2px solid #393a81;
     border-radius: 5px;
     transition: all 400ms ease;
 }
@@ -90,16 +90,3 @@ header{
     border-radius: 5px;
 }
 
-@media (max-width: 600px) {
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-        max-width: 98vw;
-        gap: 4px;
-    }
-    .card {
-        font-size: 0.8em;
-    }
-    header, .estatisticas {
-        padding: 4px;
-    }
-}
